@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr=[52,9001,0,200,100,66,45,24,68,89,89,25,-1];
+        function xier(arr){
+            for(var gap=Math.floor(arr.length/2);gap>0;gap=Math.floor(gap/2)){
+                console.log(gap)
+                for(var i=gap;i<arr.length;i++){
+                     var j=i;
+                    current=arr[i];
+                    while(j>=gap && current<arr[j-gap]){
+                        arr[j]=arr[j-gap];
+                        j=j-gap;
+                    }
+                    arr[j]=current;
+                }
+            }
+            return arr;
+        }
+        xier(arr);
+        console.log(arr)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr=[52,9001,0,200,100,66,45,24,68,89,89,25,-1];	
+        function charu(arr){
+            for(var i=1;i<arr.length;i++){
+                var current=arr[i];
+                var k=i-1;
+                while(k>=0 && current<arr[k]){
+                    arr[k+1]=arr[k]
+                    k--;
+                }
+                arr[k+1]=current
+            }
+            console.log(arr)
+        }
+        charu(arr);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
